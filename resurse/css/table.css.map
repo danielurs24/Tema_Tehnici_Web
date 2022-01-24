@@ -1,0 +1,1 @@
+{"version":3,"sourceRoot":"","sources":["../scss/table.scss","../scss/_colors.scss"],"names":[],"mappings":"AAIA;EACI;IACI;IACA;IACA;;;AAMR;EAEI;EACA;;;AAEJ;EACI;EACA,gBAnBA;;;AAuBA;EACI,kBC1BK;ED2BL;;AACA;EACI,kBC1BD;ED2BC;;AAEJ;EACI,kBC7BJ;;AD8BI;EACI,kBChCL;EDiCK","file":"table.css"}

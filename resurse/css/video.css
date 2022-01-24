@@ -1,0 +1,14 @@
+video {
+  width: 40vw;
+  height: 20vw;
+}
+
+video::cue {
+  background-color: white;
+  color: #6712E6;
+  text-align: center;
+  margin-top: 0;
+  vertical-align: text-top;
+}
+
+/*# sourceMappingURL=video.css.map */

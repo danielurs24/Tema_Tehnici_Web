@@ -1,0 +1,26 @@
+hr {
+  display: inline-block;
+  border-top: 3px solid #077DF2;
+  margin-top: 21px;
+  margin-bottom: 0px;
+  width: 20vw;
+  border-left: 50px solid #077DF2;
+  border-bottom: 20px solid transparent;
+  border-right: 50px solid #077DF2;
+  background-clip: content-box;
+}
+hr::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  border-bottom: 3px solid #077DF2;
+  margin-top: -21px;
+  margin-left: -50px;
+  width: 20vw;
+  border-left: 50px solid #077DF2;
+  border-top: 20px solid transparent;
+  border-right: 50px solid #077DF2;
+  background-clip: content-box;
+}
+
+/*# sourceMappingURL=hr.css.map */

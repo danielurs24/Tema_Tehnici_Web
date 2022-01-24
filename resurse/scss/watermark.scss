@@ -1,0 +1,13 @@
+.watermark{
+    position: fixed;
+    //height: 10vh;
+    width: auto;
+    margin-left: 50%;    
+    display: none;
+    text-align: center;
+    z-index: 1000;
+    p{
+        color: black;
+        opacity: 0.3;
+    }
+}

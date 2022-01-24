@@ -1,0 +1,67 @@
+.grid-container {
+	display: grid;
+	grid-template-areas: "zona1 zona1 zona1 zona1" 
+						 "zona1 zona1 zona1 zona1" 
+						 "zona5 zona6 zona6 zona7" 
+						 "zona3 zona3 zona2 zona2" 
+						 "zona4 zona4 zona2 zona2" 
+						 "zona8 zona8 zona8 zona8";
+	grid-gap: 10px;
+	padding: 10px;
+}
+.grid-item {
+	padding: 30px;
+	font-size: 20px;
+	width: auto;
+}
+.item1 {
+	grid-area: zona1;
+}
+.item2 {
+	grid-area: zona2;
+}
+.item3 {
+	grid-area: zona3;
+}
+.item4 {
+	grid-area: zona4;
+}
+.item5 {
+	grid-area: zona5;
+}
+.item6 {
+	grid-area: zona6;
+}
+.item7 {
+	grid-area: zona7;
+}
+.item8 {
+	grid-area: zona8;
+}
+@media only screen and (max-width: 900px) {
+	.grid-container {
+		grid-template-areas: "zona1 zona1 zona1" 
+							 "zona5 zona6 zona7" 
+							 "zona3 zona2 zona2" 
+							 "zona4 zona8 zona8";
+	}
+	.grid-item {
+		font-size: 17px;
+	}
+	
+}
+@media only screen and (max-width: 600px) {
+	.grid-container {
+		grid-template-areas: "zona1 zona1" 
+							 "zona2 zona2" 
+							 "zona3 zona3" 
+							 "zona4 zona4" 
+							 "zona5 zona5" 
+							 "zona6 zona6" 
+							 "zona7 zona7" 
+							 "zona8 zona8";
+	}
+	.grid-item {
+		font-size: 15px;
+	}
+}

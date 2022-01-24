@@ -1,0 +1,148 @@
+    $width: 400px;
+    *{
+      margin:0;
+      padding:0;
+      }
+    .galerie{
+      width: $width;
+      height: $width;
+      border:1px solid black;
+      position:relative;
+      overflow:hidden;
+      border:1px solid black;
+      margin-bottom:5rem;
+    }
+    .galerie {
+        figcaption{
+            position:absolute;
+            bottom:0;
+            background:rgba(255,255,255,0.7);
+            width:100%;
+            text-align:center;
+        }
+    }
+    .galerie{
+        figure{
+            position:relative;
+            width:$width;
+            height:$width;
+        }
+    }
+
+    #galerie2 {
+        .grid_2col{
+            display:grid;
+            
+            
+              width:(3*$width);
+              grid-template-columns: $width $width $width;
+              grid-template-rows: $width $width $width;
+            
+            
+            grid-row-gap:0;
+            grid-column-gap:0;
+            position:absolute;
+            top:0px;
+            left:0;
+            animation-name:gal2;
+            animation-direction:alternate;
+            animation-timing-function:linear;
+            animation-iteration-count:infinite;
+            animation-duration:28s;	
+            &:hover {
+              animation-play-state: paused;
+            }
+        }
+    }
+
+    .galerie {
+        figcaption{
+            bottom:0px;
+        }
+    }
+    @keyframes gal2{
+      
+            
+              0%{ 
+                top:0px;
+                left:0px;
+              }
+              11.5%{ 
+                top:0px;
+                left:-2*$width;
+              }
+              12.5%{ 
+                top:0px;
+                left:-2*$width;
+              }
+              24%{ 
+                top:0px;
+                left:-$width;
+              }
+              25%{ 
+                top:0px;
+                left:-$width;
+              }
+              36.5%{ 
+                top:-$width;
+                left:-$width;
+              }
+              37.5%{ 
+                top:-$width;
+                left:-$width;
+              }
+              49%{ 
+                top:-$width;
+                left:-2*$width;
+              }
+              50%{ 
+                top:-$width;
+                left:-2*$width;
+              }
+              61.5%{ 
+                top:-2*$width;
+                left:-2*$width;
+              }
+              62.5%{ 
+                top:-2*$width;
+                left:-2*$width;
+              }
+              74%{ 
+                top:-$width;
+                left:-$width;
+              }
+              75%{ 
+                top:-$width;
+                left:0px;
+              }
+              86.5%{ 
+                top:-2*$width;
+                left:-$width;
+              }
+              87.5%{ 
+                top:-2*$width;
+                left:-$width;
+              }
+              99%{ 
+                top:-2*$width;
+                left:0px;
+              }
+              100%{ 
+                top:-2*$width;
+                left:0px;
+              }
+              
+            
+            
+    }
+    #galerie2 figure{
+      height:$width;
+      position:relative;
+      overflow:hidden;
+    }
+
+    #galerie2 img{
+      height:100%;
+    }
+
+

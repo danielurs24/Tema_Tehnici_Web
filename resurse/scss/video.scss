@@ -1,0 +1,14 @@
+@import './colors';
+
+video
+{
+    width: 40vw; height: 20vw;
+}
+
+video::cue {
+    background-color: white;
+    color: $base-color;
+    text-align: center;
+    margin-top: 0;
+    vertical-align: text-top;
+  }

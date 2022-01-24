@@ -1,0 +1,42 @@
+{
+    "cale_galerie":"resurse/imagini/galerie",
+    "imagini":[    
+        {
+        "cale_imagine":"gadget.jpg",
+        "titlu":"Casti Gadget",
+        "descriere":"Casti cu urechi",
+        "sfert_ora":"1"
+        },
+        {
+            "cale_imagine":"gadget2.jpg",
+            "titlu":"Suport Controler",
+            "descriere":"Un suport pentru controler care face viata mai usoara",
+            "sfert_ora":"2"
+            },
+        {
+            "cale_imagine":"laptop.jpg",
+            "titlu":"Laptop",
+            "descriere":"Laptop",
+            "sfert_ora":"3"
+        },
+        {
+            "cale_imagine":"smartwatch.jpg",
+            "titlu":"Smartwatch",
+            "descriere":"Smartwatch",
+            "sfert_ora":"4"
+        },
+        {
+            "cale_imagine":"telefon.jpg",
+            "titlu":"Telefon",
+            "descriere":"Telefon",
+            "sfert_ora":"3"
+        },
+        {
+            "cale_imagine":"vr.jpg",
+            "titlu":"Ochelari VR",
+            "descriere":"Ochelari VR",
+            "sfert_ora":"3"
+        }
+        
+    ]
+}

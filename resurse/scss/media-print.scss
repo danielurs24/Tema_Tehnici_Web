@@ -1,0 +1,32 @@
+@media print {
+    header {page-break-after: always;}
+    footer {page-break-before: always;}
+    #table-container{page-break-before: always; }
+
+    .video {
+        display: none;
+    }
+    .video-iframe {
+        display: none;
+    }
+    #homebtn{
+        display: none;
+    }
+    a{
+        text-decoration: none;
+    }
+    h1{
+        text-align: center;
+    }
+    #ch-menu {
+        display: none;
+    }
+    #hamburger {
+        display: none;
+    }
+    .watermark{
+        display: block;
+        width: 100%;
+    }
+    
+}

@@ -1,0 +1,50 @@
+@import './colors';
+
+.video-iframe{
+    //width: 40w;
+    //height: auto;
+    iframe{
+        width: 40vw;
+        height: 20vw;
+        vertical-align: bottom;
+        background-color: $border;
+        padding: 5px;
+        border: none;
+    }
+    .iframe-buttons-div{
+        width: 40vw;
+        margin-top: 0px;
+        height: auto;
+        display: flex;
+        justify-content: flex-end;
+        .iframe-link{
+            box-shadow:0px 0px 10px 5px $border inset;
+            margin-right: 1vw;
+            margin-left: 1vw;
+            width: 9vw;
+            height: auto;
+            display: inline-block;
+            border-left: 5px solid $border;
+            border-right: 5px solid $border;
+            border-top: 5px solid $border;
+            border-bottom: 5px solid $border;
+            border-bottom-left-radius: 25%;
+            border-bottom-right-radius: 25%;
+            box-sizing: border-box;
+            margin-top: 0;
+            text-decoration: none;
+            color: black;text-align: center;
+            padding: 5px;
+            font-size: 1.4vw;
+            font-weight: bold;
+            &:hover{
+                box-shadow: 0px 0px 0px 0px $border inset;
+                transition: box-shadow 1000ms linear;
+            }
+            
+            
+        }
+       
+    } 
+    
+}

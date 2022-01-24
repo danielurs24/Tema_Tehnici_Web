@@ -1,0 +1,243 @@
+ /* h1{
+                padding-top: 50px;
+                margin: 0;
+                color: var(--border);
+            }
+           
+            nav{
+                height: var(--inalt-meniu);
+                width: 100%;
+                background-image: linear-gradient(to right, var(--base-color) , var(--border));
+                position: fixed;
+                top: 0;
+                left: 0;
+            }
+
+            nav ul, nav a, nav{
+                padding: 0;
+                margin: 0;
+            }
+            ul.meniu li{
+                border: 1px solid black;
+                box-sizing: border-box;
+                width: 175px;
+                text-align: center;
+                list-style-type: none;
+                height: var(--inalt-meniu);
+                float: left;
+            }
+
+            ul.meniu ul{
+                display: none;
+            }
+
+            ul.meniu li:hover ul{
+                display: block;
+            }
+
+            ul.meniu li a{
+                /*background-color: var(--base-color);
+                display: block;
+                width: 100%;
+                height: 100%;
+                box-sizing: border-box;
+            }
+
+            ul.meniu li ul a{
+                background-color: var(--base-color); 
+            }
+
+            ul.meniu li a, ul.meniu li div{
+                text-decoration: none;
+                color: white;
+                font-weight: bold;
+                padding: 5px; 
+            }
+
+            #texthome{
+                display:inline-block;
+            }
+
+            #ch-menu{
+                display: none;
+            }
+        
+            #hamburger{
+                display: none;
+            }
+        
+            .grid-container{
+                display: grid;
+                grid-template-areas: "zona1 zona1 zona1 zona1"
+                                    "zona1 zona1 zona1 zona1"
+                                    "zona5 zona6 zona6 zona7"
+                                    "zona3 zona3 zona2 zona2"
+                                    "zona4 zona4 zona2 zona2"
+                                    "zona8 zona8 zona8 zona8";
+                grid-gap: 10px;
+                padding: 10px;
+                
+            }
+            .grid-item {
+                padding: 30px;
+                font-size: 20px;
+                width: auto;
+                border:1px solid navy;
+            }
+            .item1{
+                grid-area: zona1;
+            }
+            .item2{
+                grid-area: zona2;
+            }
+            .item3{
+                grid-area: zona3;
+            }
+            .item4{
+                grid-area: zona4;
+            }
+            .item5{
+                grid-area: zona5;
+            }
+            .item6{
+                grid-area: zona6;
+            }
+            .item7{
+                grid-area: zona7;
+            }
+            .item8{
+                grid-area: zona8;
+            }
+
+            @media only screen and (max-width: 900px) {
+                .grid-container {
+                    grid-template-areas: "zona1 zona1 zona1"
+                                        "zona5 zona6 zona7"
+                                        "zona3 zona2 zona2"
+                                        "zona4 zona8 zona8";
+                }
+                .grid-item{
+                    font-size: 17px;
+                }
+                #texthome{
+                    display:none;
+                }
+                ul.meniu li{
+                    width: 100px;
+                }
+                
+                
+            }
+
+            @media only screen and (max-width: 600px) {
+                .grid-container {
+                    grid-template-areas: "zona1 zona1"
+                                        "zona2 zona2"
+                                        "zona3 zona3"
+                                        "zona4 zona4"
+                                        "zona5 zona5"
+                                        "zona6 zona6"
+                                        "zona7 zona7"
+                                        "zona8 zona8";
+                }
+                .grid-item{
+                    font-size: 15px;
+                }
+
+                #hamburger{
+                    display: inline-block;
+                    color: white;
+                    padding-left: 5px;
+                }
+
+                ul.meniu{
+                    display: none;
+                }
+
+                #ch-menu:checked + ul.meniu{
+                    display: block;
+                    animation: slide-bottom 0.5s;
+                    
+                }
+                
+                ul.meniu li{
+                    width: 100%;
+    
+                }
+
+                ul.meniu>li a{
+                    animation: tracking 0.5s;
+                    background-color: var(--base-color);  
+                }
+                @keyframes tracking{0%{letter-spacing:-.5em;}100%{letter-spacing:0em;}}
+                
+                ul.meniu>li a:hover{
+                    background-color: var(--highlight);
+                    transition: background-color 1000ms linear;
+                }
+                
+                ul.meniu li:hover ul{
+                    position: relative;
+                    animation: slide-bottom 2s;
+                    
+                }
+                @keyframes slide-bottom{0%{transform:translateY(-10px);opacity: 0%;}100%{transform:translateY(0px);opacity: 100%;}}
+            } 
+            
+            .triangle {
+                width: 0;
+                height: 0;
+                border-left: 12px solid transparent;
+                border-right: 12px solid transparent;
+                border-bottom: 24px solid var(--border);
+                border-radius: 0px 0px 12px 12px;
+                transform: rotate(-45deg);
+    }
+            #homebtn {
+                border:1px solid var(--border);
+                position: fixed;
+                bottom: 20px;
+                right: 30px;
+                z-index: 99;
+                font-size: 18px;
+                background-color: var(--base-color);
+                color: var(--base-color);
+                cursor: pointer;
+                padding: 10px;
+                transform: rotate(45deg);
+                opacity: 25%;
+                transition: 2s;
+            }
+            
+            #homebtn:hover {
+                border:1px solid var(--base-color);
+                background-color: var(--border);
+                opacity: 75%;
+                font-size: 24px;
+            }
+
+            .tip {
+                position: relative;
+                display: inline-block;
+            }
+
+            .tip .tiptext{
+                visibility: hidden;
+                text-align: center;
+                color: black;
+                opacity: 100%;
+                font-size: 15px;
+                padding-left: 20px;
+                padding-top: 20px;
+                position: absolute;
+                z-index: 1;
+            }
+
+            .tip:hover .tiptext {
+                visibility: visible;
+            }
+
+            .tip:hover .triangle{
+                border-bottom: 24px solid var(--base-color);
+            }
+            */

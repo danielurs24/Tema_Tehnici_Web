@@ -1,0 +1,17 @@
+/* Error: expected "{".
+ *    ,
+ * 37 |             width:(2*$width);
+ *    |                             ^
+ *    '
+ *   resurse\scss\galerie_animata.scss 37:29  root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: 'Error: expected "{".\a    \2577 \a 37 \2502              width:(2*$width);\d\a    \2502                              ^\a    \2575 \a   resurse\\scss\\galerie_animata.scss 37:29  root stylesheet';
+}

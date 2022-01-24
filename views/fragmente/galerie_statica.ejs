@@ -1,0 +1,22 @@
+<section id="galerie-statica">
+    <h2>Galerie</h2>
+    <div id="grid-galerie">
+        <% d=new Date();
+        let minutes = d.getMinutes();
+        var data_filter = locals.imagini.filter( element => element.sfert_ora == parseInt(minutes/15)+1)
+        for (let imag of data_filter.slice(0,9)){
+
+            %>
+
+            <figure>
+                <picture>
+                    <!-- il ia pe primul care se potriveste cu query-ul din media-->
+                    <source srcset="/<%- imag.mic%>" media="(max-width:700px)"/>
+                    <source srcset="/<%- imag.med%>" media="(max-width:900px)"/>
+                    <img src="/<%- imag.mare %>" alt="text"/>
+                </picture>
+                <figcaption><%-imag.titlu%></figcaption>
+            </figure>
+        <% } %>
+    </div>
+</section>

@@ -1,0 +1,36 @@
+<header>
+    <h1 id="acasa"><i class="fa fa-bolt fa-spin"></i>  Mag<span class="span-title">Dan</span></h1>
+    <nav>
+        <label id="hamburger" for="ch-menu">
+            <i class="fa fa-bars fa-2x"></i>
+        </label>
+        <input type="checkbox" id="ch-menu">
+        <ul class = "meniu">
+            <li><a href="/index#acasa"><i class="fa fa-home"></i><span id ="texthome">Acasa</span></a>
+                <ul class="drawer__content">
+                    <li><a href="/galerie_statica">Galerie</a></li>
+                    <li><a href="/oferte_noi">Oferte noi</a></li>
+                </ul>
+            </li>
+            <li><a href="/index#telefon">Telefoane</a></li>
+            <li><a href="/index#laptop">Laptopuri</a></li>
+            <li><a href="/index#gadget">Gadget-uri</a>
+                <ul>
+                    <li><a href="/index#smartwatch">SmartWatch-uri</a></li>
+                    <li><a href="/index#vr">Ochelari VR</a></li>
+                </ul>
+            </li>
+            <li><a>Produse</a>
+                <ul>
+                    <li><a href="/produse">Toate</a></li>
+                    <% for (let opt of locals.optiuni) { %>
+                        <li><a href="/produse?categorie=<%- opt %>"><%- opt %></a></li>
+                    <% } %>
+                </ul>
+            </li>
+            
+        </ul>
+            
+        
+    </nav>
+</header>

@@ -1,0 +1,54 @@
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 24px solid #077DF2;
+  border-radius: 0px 0px 12px 12px;
+  transform: rotate(-45deg);
+}
+
+#homebtn {
+  border: 1px solid var(--border);
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  background-color: #6712E6;
+  cursor: pointer;
+  padding: 10px;
+  transform: rotate(45deg);
+  opacity: 25%;
+  transition: 2s;
+}
+#homebtn:hover {
+  border: 1px solid #6712E6;
+  background-color: #077DF2;
+  opacity: 75%;
+  font-size: 24px;
+}
+
+.tip {
+  position: relative;
+  display: inline-block;
+}
+.tip .tiptext {
+  visibility: hidden;
+  text-align: center;
+  color: black;
+  opacity: 100%;
+  font-size: 15px;
+  padding-left: 20px;
+  padding-top: 20px;
+  position: absolute;
+  z-index: 1;
+}
+.tip:hover .tiptext {
+  visibility: visible;
+}
+.tip:hover .triangle {
+  border-bottom: 24px solid #6712E6;
+}
+
+/*# sourceMappingURL=top-link-button.css.map */

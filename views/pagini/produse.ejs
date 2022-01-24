@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ro">
+    <head>
+        <title>Oferte noi</title>
+        <meta name="description" content="Site destinat vanzarilor de Electronice">
+        <meta name="keywords" content="telefoane, laptop, pc, desktop, gadget, vr, smartwatch">      
+        <%- include("../fragmente/head.ejs") %> 
+        <script type="text/javascript" src=/resurse/js/produse.js></script>
+    </head>
+    <body>
+        
+        <%- include("../fragmente/header.ejs") %> 
+        <main>
+            <label> Nume: <input type="text" id="inp-nume"></label>
+            <!--<label> Maxim culoare: <input type="number" id="inp-culoare" value="10000"></label>-->
+            <div> Culoare:<!-- trebuie sa aiba acelasi name ca sa formeze un grup -->
+                <label> Rosu
+                    <input id="i_rad1"  name="gr_rad" value="1" type="radio"/>
+                </label>
+                <label> Negru
+                    <input id="i_rad2"  name="gr_rad" value="2" type="radio"/>
+                </label>
+                <label> Albastru
+                    <input id="i_rad3" name="gr_rad" value="3" type="radio"/>
+                </label>
+                <label>Toate
+                    <input id="i_rad4" checked name="gr_rad" value="4" type="radio"/>
+                </label>
+            </div> 
+            <div> In Stoc:<!-- trebuie sa aiba acelasi name ca sa formeze un grup -->
+                <label> Da
+                    <input id="i_check1"  name="gr_check" value="1" type="checkbox"/>
+                </label>
+                <label> Nu
+                    <input id="i_check2"  name="gr_check" value="2" type="checkbox"/>
+                </label>
+            </div> 
+    
+    
+            <label> Pret minim: 0 <input type="range" id="inp-pret-min" value="0" min="0"  max="5000"> 5000 <span id="infoRange-min">(0)</span></label>
+            <label> Pret maxim: 0 <input type="range" id="inp-pret-max" value="5000" min="0"  max="5000"> 5000 <span id="infoRange-max">(0)</span></label>
+            <label>Select simplu:
+                <select id="inp-categorie">
+                    <option id="sel-toate" selected value="toate">toate</option>
+                    <% for (let opt of locals.produse) { %>
+                        <option value="<%- opt.nume %>"><%- opt.nume %> </option>
+                    <% } %>
+                </select>
+            </label>
+            <p>
+            <button id="filtrare">Filtreaza</button> <button id="resetare">Reseteaza</button><br/>
+            <button id="sortCrescNume">Sorteaza crescator dupa nume si pret</button>
+            <button id="sortDescrescNume">Sorteaza descrescator dupa nume si pret</button>
+            
+            </p>
+            
+            <p id="p-suma">Apăsați Alt+"c" pentru suma preturilor produselor afișate. </p>
+            <section id="produse">
+                <h2>Produse</h2>
+                <div class="grid-produse">
+                    <% for( let prod of locals.produse) { %>
+                        <article class="produs" >
+                            <h3 class="nume">Nume: <a href="/produs?id=<%-prod.id %>" ><span class="val-nume"><%- prod.nume%></span></a></h3>
+                            <div class="info-prod">
+                                <p class="pret">Pret: <span class="val-pret"><%- prod.pret%></span></p>
+                                <p class="culoare">Culoare: <span class="val-culoare"><%- prod.culoare%></span></p>
+                                <p class="tip">Tip: <span class="val-tip"><%- prod.tip%></span></p>
+                                <p class="stoc">In Stoc: <span class="val-stoc"><% if(prod.in_stoc == true){%>Da<%}%><% if(prod.in_stoc == false) { %> Nu <%}%></span></p>
+                            </div>
+                            <p class="categorie">Categorie:<span class="val-categorie"><%- prod.categorie%></span></p>
+                            <figure>
+                                <a href="/produs?id=<%-prod.id %>" ><img src="/resurse/imagini/produse/<%- prod.imagine %>" style="width:50%;height:auto;" alt="[imagine <%- prod.nume %>]" /></a>
+                            </figure>
+                            
+                            <label class="selecteaza-cos">
+                                Selectează:<br/>
+                                <input type="checkbox" class="select-cos" value="<%-prod.id %>" autocomplete="off">
+                            </label>
+                        </article>
+                    <% }%>
+                </div>
+            </section>
+        </main>
+        <%- include("../fragmente/footer.ejs") %> 
+    </body>
+</html>

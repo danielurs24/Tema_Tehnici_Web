@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ro">
+    <head>
+        <title>Oferte noi</title>
+        <meta name="description" content="Site destinat vanzarilor de Electronice">
+        <meta name="keywords" content="telefoane, laptop, pc, desktop, gadget, vr, smartwatch">      
+        <%- include("../fragmente/head.ejs") %> 
+        <style>
+          
+        </style>
+    </head>
+    <body>
+        <%- include("../fragmente/header.ejs") %> 
+        <main>
+            <section>
+                <h2>Pagină produs</h2>
+                    <article id="art-produs">
+                        <div class="grid-container">
+                            <div class="grid-item">
+                                <figure class="imag-produs">
+                                    <img  src="/resurse/imagini/produse/<%- locals.prod.imagine %>" alt="[imagine <%- locals.prod.nume %>]" />
+                                </figure>
+                            </div>
+                            <div class="grid-item">
+                                <h3><span class="nume"><%- locals.prod.nume %></span></h3>
+                                <p>Categorie: <span class="pret"><%- locals.prod.categorie %> </span></p>
+                                <p>Descriere: <span class="pret"><%- locals.prod.descriere %> </span></p>
+                                <p>Pret: <span class="pret"><%- locals.prod.pret %> </span></p>
+                                <p>Culoare: <span class="pret"><%- locals.prod.culoare %> </span></p>                        
+                                <p>Dimensiuni: <span class="descriere"><%- locals.prod.dimensiuni %> </span></p>
+                                <p>Lansare Produs: <span class="pret"><time><%- locals.prod.lansare_produs %></time> </span></p>
+                            </div>
+                            
+                    </div>
+                    </article>
+                
+            </section>
+        </main>
+        <%- include("../fragmente/footer.ejs") %> 
+    </body>
+</html>

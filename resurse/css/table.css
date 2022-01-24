@@ -1,0 +1,34 @@
+@media only screen and (max-width: 600px) {
+  .table-container {
+    width: 15em;
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+}
+table, th, td {
+  padding: 5px;
+  text-align: center;
+}
+
+table {
+  border: 1px solid black;
+  border-spacing: 2px;
+}
+
+tbody tr {
+  background-color: #6712E6;
+  color: white;
+}
+tbody tr:hover {
+  background-color: #F51270;
+  transition: background-color 1000ms linear;
+}
+tbody tr:nth-child(even) {
+  background-color: #077DF2;
+}
+tbody tr:nth-child(even):hover {
+  background-color: #F51270;
+  transition: background-color 1000ms linear;
+}
+
+/*# sourceMappingURL=table.css.map */

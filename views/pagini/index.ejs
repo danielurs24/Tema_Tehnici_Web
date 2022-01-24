@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ro">
+    <head>
+        <title>MagDan</title>
+        <meta name="description" content="Site destinat vanzarilor de Electronice">
+        <meta name="keywords" content="telefoane, laptop, pc, desktop, gadget, vr, smartwatch">
+        <link rel="stylesheet" href="./resurse/css/grid.css">      
+        <%- include("../fragmente/head.ejs") %> 
+        <style>
+          
+        </style>
+    </head>
+    <body>
+        <%- include("../fragmente/watermark.ejs") %>  
+        <%- include("../fragmente/header.ejs") %>
+        
+        <main>
+            <div class="grid-container">
+                <div class="grid-item item1">
+                    <section>
+                        <h2>Bun venit la noi pe site!</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean et nunc orci. 
+                            Phasellus accumsan aliquet ligula, nec aliquet erat vestibulum in. Integer sed interdum elit.
+                            Praesent a nunc leo. Proin feugiat lacus non libero suscipit, nec mollis leo rutrum. 
+                            Morbi lacinia tortor vitae nunc tempus interdum. Fusce vehicula, nibh rhoncus sodales semper, 
+                            diam turpis volutpat ligula, laoreet elementum tortor quam quis risus.  
+                        </p>
+                          <p>
+                            Praesent a nunc leo. <br>
+                            Proin feugiat lacus.
+                          </p>  
+                            Phasellus nec nisl.</p>
+                    </section>  
+                </div>
+                <div class="grid-item
+                 item2">
+                 <%- include("../fragmente/tabel.ejs") %>
+                </div>
+                <div class="grid-item item3">
+                    <p>Calendar Evenimente</p>
+                </div>
+                <div class="grid-item item4">
+                    <p>Anunturi</p>
+                </div>
+                <div class="grid-item item5">
+                    <p>Utilizatori Online</p>
+                </div>
+                <div class="grid-item item6">
+                    <p>IP-ul utilizatorului este: <%- ip %></p>
+                </div>
+                <div class="grid-item item7">
+                    <p>Date despre site si server</p>
+                </div>
+                <div class="grid-item item8">
+                    <%- include("../fragmente/galerie_statica.ejs") %>
+                    <%- include("../fragmente/galerie_animata.ejs") %>
+                    <section id="telefon">
+                        <h2>Telefoane</h2>
+                        <p>Iti doresti un <b>telefon</b> mobil nou? 
+                            La noi, <b>telefoanele</b> mobile au preturi avantajoase. 
+                            Cumpara acum si beneficiezi de transport gratuit</p>
+                        <ul>
+                            <li><b>Telefoane</b> Android</li>
+                            <li><b>Telefoane</b> IOS</li>
+                        </ul>
+                        <a href="https://www.gsmarena.com/" target="_blank">Cauta Specificatiile Telefoanelor</a>
+                        <div>
+                            <video controls poster="/resurse/imagini/best_smartphone.jpg" preload="metadata" class="video">
+                                <source src="/resurse/video/Video.mp4" type="video/mp4">
+                                <source src="/resurse/video/Video.ogg" type="video/ogg">
+                                <track src="/resurse/video/subs_eng.vtt" kind="subtitles" srclang="en" label="English">
+                                <track src="/resurse/video/subs_ro.vtt" kind="subtitles" srclang="ro" label="Romanian" default>
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        
+                    </section>
+                    <section id="laptop">
+                        <h2><b>Laptopuri</b> sau <b>PC-uri</b></h2>
+                        <p>Alege <i><b>laptopuri/pc-uri</b></i> ieftine de la noi!</p>
+                        <p>Vezi <i><b>laptopuri/pc-uri</b></i> performante, ai libertatea de a alege din multe modele,
+                             beneficiezi de promotiile zilei si retur gratuit in 30 de zile.</p>
+                             <ul>
+                                <li>Procesoare AMD</li>
+                                <li>Procesoare Intel</li>
+                            </ul>
+                        
+                    </section>
+                    <section id="gadget">
+                        <h2><i>Gadget-uri</i></h2>
+                        <p>Vrei <i><b>gadeget-uri</b></i> ieftine?</p>
+                           <p>La noi gasesti o varietate mare de produse din diverse categorii.</p>
+                           <div class="video-iframe">
+                                <iframe name="video" src="https://www.youtube.com/embed/CrYsTqtcGTs"></iframe>
+                                <div class="iframe-buttons-div">
+                                    <a href="https://www.youtube.com/embed/CrYsTqtcGTs" target="video" class="iframe-link">Smart Watch</a>
+                         
+                                    <a href="https://www.youtube.com/embed/ULdt1rEgldc" target="video" class="iframe-link">Ochelari VR</a>
+                                </div>
+                            </div>
+        
+                          
+                           <section id="smartwatch">
+                                <h3><i>SmartWatch-uri</i></h3>
+                                <p>Cumpara acum <i><b>smartWatch-uri</b></i> la cele mai mici preturi.</p>
+                                <ul>
+                                    <li>Apple <i>Watch Series</i></li>
+                                    <li>Samsung <i>Watch</i></li>
+                                </ul>             
+                            <hr>
+                            </section>
+                            <section id="vr">
+                                <h3>Ochelari <i><b><abbr title="Virtual Reality">VR</abbr></b></i></h3>
+                                <p>Cumpara acum Ochelari <i><b><abbr title="Virtual Reality">VR</abbr></b></i> la cele mai mici preturi.</p>
+                                <ul>
+                                    <li>Xbox <i><b><abbr title="Virtual Reality">VR</abbr></b></i></li>
+                                    <li>PS4 <i><b><abbr title="Virtual Reality">VR</abbr></b></i></li>
+                                </ul>
+                                
+                            <hr>
+                            </section>
+                            <section id="oferte">
+                                <h2>Oferte Speciale</h2>
+                                <ul>
+                                    <li><a href="#telefon">Telefoane la oferta</a></li>
+                                    <li><a href="#laptop">Laptop redus doar azi!</a></li>
+                                </ul>                        
+                            </section>
+                            <section id="intrebari">
+                                <h2>Intrebari Frecvente</h2>
+                                <dl>
+                                    <dt>Pot comanda la orice ora?</dt>
+                                    <dd>Poti comanda oricand.</dd>
+                                    <dt>In cat timp se face livrarea?</dt>
+                                    <dd>In 2-3 zile lucratoare.</dd>
+                                  </dl>
+                                
+                            </section>
+                            
+                    </section>
+                </div>
+              </div>
+            
+            
+            
+        
+        </main>
+        
+        <%- include("../fragmente/footer.ejs") %> 
+    </body>
+</html>

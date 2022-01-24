@@ -1,0 +1,41 @@
+@import './colors';
+
+$s: 2px;
+
+@media only screen and (max-width: 600px) {
+    .table-container{
+        width: 15em;
+        overflow-x: scroll;
+        overflow-y: hidden;
+    }
+    
+}
+
+
+table, th, td {
+   // border: 1px solid black;
+    padding: 5px;
+    text-align: center;
+  }
+table{
+    border: 1px solid black;
+    border-spacing: $s;
+  }
+
+tbody{
+    tr{
+        background-color: $base-color;
+        color: white;
+        &:hover{
+            background-color: $highlight;
+            transition: background-color 1000ms linear;
+        }
+        &:nth-child(even){
+            background-color: $border;
+            &:hover{
+                background-color: $highlight;
+                transition: background-color 1000ms linear;
+            }
+        } 
+    }
+}

@@ -1,0 +1,313 @@
+    $width: 400px;
+    *{
+      margin:0;
+      padding:0;
+      }
+    .galerie{
+      width: $width;
+      height: $width;
+      border:1px solid black;
+      position:relative;
+      overflow:hidden;
+      border:1px solid black;
+      margin-bottom:5rem;
+    }
+    .galerie {
+        figcaption{
+            position:absolute;
+            bottom:0;
+            background:rgba(255,255,255,0.7);
+            width:100%;
+            text-align:center;
+        }
+    }
+    .galerie{
+        figure{
+            position:relative;
+            width:$width;
+            height:$width;
+        }
+    }
+
+    #galerie2 {
+        .grid_2col{
+            display:grid;
+            <% 
+            if(locals.nr == 4){ %>
+            width:(2*$width);
+            grid-template-columns: $width $width;
+            grid-template-rows: $width $width;
+            <% } %>
+            <% if(locals.nr == 9){ %>
+              width:(3*$width);
+              grid-template-columns: $width $width $width;
+              grid-template-rows: $width $width $width;
+            <% } %>
+            <% if(locals.nr == 16){ %>
+              width:(4*$width);
+              grid-template-columns: $width $width $width $width;
+              grid-template-rows: $width $width $width $width;
+    
+            <% } %>
+            grid-row-gap:0;
+            grid-column-gap:0;
+            position:absolute;
+            top:0px;
+            left:0;
+            animation-name:gal2;
+            animation-direction:alternate;
+            animation-timing-function:linear;
+            animation-iteration-count:infinite;
+            animation-duration:28s;	
+            &:hover {
+              animation-play-state: paused;
+            }
+        }
+    }
+
+    .galerie {
+        figcaption{
+            bottom:0px;
+        }
+    }
+    @keyframes gal2{
+      <% 
+            if(locals.nr == 4){ %>
+              0%{ 
+                top:0px;
+                left:0px;
+              }
+              32.3%{ 
+                top:-$width;
+                left:-$width;
+              }
+              33.3%{ 
+                top:-$width;
+                left:-$width;
+              }
+              65.6%{ 
+                top:-$width;
+                left:0px;
+              }
+              66.6%{ 
+                top:-$width;
+                left:0px;
+              }
+              99%{ 
+                top:0px;
+                left:-$width;
+              }
+              100%{ 
+                top:0px;
+                left:-$width;
+              }
+            <% } %>
+            <% if(locals.nr == 9){ %>
+              0%{ 
+                top:0px;
+                left:0px;
+              }
+              11.5%{ 
+                top:0px;
+                left:-2*$width;
+              }
+              12.5%{ 
+                top:0px;
+                left:-2*$width;
+              }
+              24%{ 
+                top:0px;
+                left:-$width;
+              }
+              25%{ 
+                top:0px;
+                left:-$width;
+              }
+              36.5%{ 
+                top:-$width;
+                left:-$width;
+              }
+              37.5%{ 
+                top:-$width;
+                left:-$width;
+              }
+              49%{ 
+                top:-$width;
+                left:-2*$width;
+              }
+              50%{ 
+                top:-$width;
+                left:-2*$width;
+              }
+              61.5%{ 
+                top:-2*$width;
+                left:-2*$width;
+              }
+              62.5%{ 
+                top:-2*$width;
+                left:-2*$width;
+              }
+              74%{ 
+                top:-$width;
+                left:-$width;
+              }
+              75%{ 
+                top:-$width;
+                left:0px;
+              }
+              86.5%{ 
+                top:-2*$width;
+                left:-$width;
+              }
+              87.5%{ 
+                top:-2*$width;
+                left:-$width;
+              }
+              99%{ 
+                top:-2*$width;
+                left:0px;
+              }
+              100%{ 
+                top:-2*$width;
+                left:0px;
+              }
+              
+            <% } %>
+            <% if(locals.nr == 16){ %>
+              0%{ 
+                top:0px;
+                left:0px;
+              }
+              5.66%{ 
+                top:0px;
+                left:-2*$width;
+              }
+              6.66%{ 
+                top:0px;
+                left:-2*$width;
+              }
+              12.32%{ 
+                top:0px;
+                left:-$width;
+              }
+              13.32%{ 
+                top:0px;
+                left:-$width;
+              }
+              19%{ 
+                top:(-$width);
+                left:(-$width);
+              }
+              20%{ 
+                top:(-$width);
+                left:(-$width);
+              }
+              25.64%{ 
+                top:(-$width);
+                left:2*(-$width);
+              }
+              26.64%{ 
+                top:(-$width);
+                left:2*(-$width);
+              }
+              32.30%{ 
+                top:2*(-$width);
+                left:2*(-$width);
+              }
+              33.30%{ 
+                top:2*(-$width);
+                left:2*(-$width);
+              }
+              39%{ 
+                top:(-$width);
+                left:0px;
+              }
+              40%{ 
+                top:(-$width);
+                left:0px;
+              }
+              45.62%{ 
+                top:2*(-$width);
+                left:(-$width);
+              }
+              46.62%{ 
+                top:2*(-$width);
+                left:(-$width);
+              }
+              52.3%{ 
+                top:2*(-$width);
+                left:0px;
+              }
+              53.3%{ 
+                top:2*(-$width);
+                left:0px;
+              }
+              59%{ 
+                top:0;
+                left:3*(-$width);
+              }
+              60%{ 
+                top:0;
+                left:3*(-$width);
+              }
+              65.6%{ 
+                top:(-$width);
+                left:3*(-$width);
+              }
+              66.6%{ 
+                top:(-$width);
+                left:3*(-$width);
+              }
+              72.26%{ 
+                top:3*(-$width);
+                left:2*(-$width);
+              }
+              73.26%{ 
+                top:3*(-$width);
+                left:2*(-$width);
+              }
+              78.9%{ 
+                top:3*(-$width);
+                left:0;
+              }
+              79.9%{ 
+                top:3*(-$width);
+                left:0;
+              }
+              85.58%{ 
+                top:3*(-$width);
+                left:(-$width);
+              }
+              86.58%{ 
+                top:3*(-$width);
+                left:(-$width);
+              }
+              92.24%{ 
+                top:3*(-$width);
+                left:3*(-$width);
+              }
+              93.24%{ 
+                top:3*(-$width);
+                left:3*(-$width);
+              }
+              100%{ 
+                top:2*(-$width);
+                left:3*(-$width);
+              }
+              100%{ 
+                top:2*(-$width);
+                left:3*(-$width);
+              }
+            <% } %>
+    }
+    #galerie2 figure{
+      height:$width;
+      position:relative;
+      overflow:hidden;
+    }
+
+    #galerie2 img{
+      height:100%;
+    }
+
+

@@ -1,0 +1,3 @@
+                    <!-- <% for(let categ of locals.optiuni){ %>
+                        <li><a href="/produse?categorie=<%- categ%>"><%- categ%></a></li>
+                    <% }%> -->
